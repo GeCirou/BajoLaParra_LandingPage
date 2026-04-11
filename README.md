@@ -23,3 +23,4 @@ Este proyecto fue desarrollado con un stack moderno enfocado en la performance y
 
 ## Visualización y pruebas
 
+https://bajolaparrajoyas.vercel.app/
