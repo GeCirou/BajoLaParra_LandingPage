@@ -5,6 +5,7 @@ import ceramica from "../assets/Ceramica.png";
 import prevImg from "../assets/prev.png";
 import nextImg from "../assets/next.png";
 
+// Base de datos de las imagenes
 const galeria = [
     { src: joya, alt: "Anillo", title: "Anillo de flor de lis", description: "Anillo de plata con diseño de flor de lis, inspirado en la elegancia." },
     { src: plateria, alt: "Mate", title: "Mate con virolas", description: "Mate artesanal hecho con calabaza negra y virolas de alpaca." },
@@ -22,7 +23,7 @@ export default function Ventas() {
     const handleNext = () => setCurrentIndex((prev) => (prev === galeria.length - 1 ? 0 : prev + 1));
     const handlePrev = () => setCurrentIndex((prev) => (prev === 0 ? galeria.length - 1 : prev - 1));
 
-    // --- NUEVO: Control por teclado ---
+    // Control por teclado
     useEffect(() => {
         const handleKeyDown = (e) => {
             if (e.key === "ArrowRight") handleNext();
@@ -33,8 +34,8 @@ export default function Ventas() {
         
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, []); 
-    // ----------------------------------
 
+    // Desplazamiento del swipe
     const onTouchStart = (e) => {
         setTouchEnd(null);
         setTouchStart(e.targetTouches[0].clientX);

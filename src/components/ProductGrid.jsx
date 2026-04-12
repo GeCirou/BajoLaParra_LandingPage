@@ -6,6 +6,7 @@ import ceramica from "../assets/Ceramica.png";
 import prev from "../assets/prev.png";
 import next from "../assets/next.png";
 
+// Base de datos de las imagenes
 const galeria = [
     [
         { src: joya, alt: "Anillo de flor de lis 1" },
@@ -34,7 +35,7 @@ export default function ProductGrid() {
     const [carrousel, setCarrousel] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Lógica de Swipe para el Modal
+    // Lógica de Swipe
     const [touchStart, setTouchStart] = useState(null);
     const [touchEnd, setTouchEnd] = useState(null);
     const minSwipeDistance = 50;
@@ -54,6 +55,7 @@ export default function ProductGrid() {
         if (distance < -minSwipeDistance) handlePrev();
     };
 
+    // Control por teclado
     useEffect(() => {
         const handleKeyDown = (e) => {
             if (!carrousel) return;
@@ -72,14 +74,12 @@ export default function ProductGrid() {
                     {items.map((item, index) => (
                         <div key={index} className="flex flex-col bg-marfil rounded-tl-3xl rounded-br-3xl p-6 lg:p-8 text-center shadow-2xl transition-all duration-300 hover:-translate-y-2 h-full">
                             
-                            {/* Título con altura controlada */}
                             <div className="min-h-[60px] lg:min-h-[80px] flex items-center justify-center mb-2">
                                 <h3 className="text-2xl lg:text-3xl font-bold text-deep-blue font-serif leading-tight">
                                     {item.title}
                                 </h3>
                             </div>
                             
-                            {/* Contenedor de Imagen ajustable */}
                             <div className="flex-grow flex items-center justify-center mb-4 min-h-0">
                                 <img 
                                     src={item.img} 
@@ -88,14 +88,12 @@ export default function ProductGrid() {
                                 />
                             </div>
 
-                            {/* Descripción */}
                             <div className="mb-4">
                                 <p className="text-sm lg:text-base text-justify text-deep-blue leading-relaxed">
                                     {item.text}
                                 </p>
                             </div>
 
-                            {/* Botón */}
                             <div className="mt-auto">
                                 <button 
                                     onClick={() => { setCarrousel(galeria[index]); setCurrentIndex(0); }}
@@ -109,7 +107,7 @@ export default function ProductGrid() {
                 </div>
             </div>
 
-            {/* Modal de Galería Abierta */}
+            {/* Galería Abierta */}
             {carrousel && (
                 <div className="fixed inset-0 z-50 bg-deep-blue/95 backdrop-blur-md flex items-center justify-center p-4">
                     <div 
@@ -118,7 +116,6 @@ export default function ProductGrid() {
                         onTouchMove={onTouchMove}
                         onTouchEnd={onTouchEnd}
                     >
-                        {/* Botón Prev - Escondido en mobile */}
                         <button 
                             onClick={handlePrev} 
                             className="hidden md:flex absolute -left-16 lg:-left-24 hover:scale-110 transition-transform p-4 cursor-pointer"
@@ -145,7 +142,6 @@ export default function ProductGrid() {
                             </div>
                         </div>
 
-                        {/* Botón Next - Escondido en mobile */}
                         <button 
                             onClick={handleNext} 
                             className="hidden md:flex absolute -right-16 lg:-right-24 hover:scale-110 transition-transform p-4 cursor-pointer"
