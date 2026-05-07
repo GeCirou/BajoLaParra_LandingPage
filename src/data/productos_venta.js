@@ -1,10 +1,10 @@
-import v1 from '../assets/piezas/C.png'
-import v2 from '../assets/piezas/C6.png'
-import v3 from '../assets/piezas/C7.png'
-import v4 from '../assets/piezas/C8.png'
-import v5 from '../assets/piezas/C10.png'
-import v6 from '../assets/piezas/J8.png'
-import v7 from '../assets/piezas/P3.png'
+import v1 from '../assets/piezas/C.webp'
+import v2 from '../assets/piezas/C6.webp'
+import v3 from '../assets/piezas/C7.webp'
+import v4 from '../assets/piezas/C8.webp'
+import v5 from '../assets/piezas/C10.webp'
+import v6 from '../assets/piezas/J8.webp'
+import v7 from '../assets/piezas/P3.webp'
 
 export const PRODUCTOS = [
     {

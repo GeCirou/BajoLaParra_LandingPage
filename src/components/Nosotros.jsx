@@ -1,12 +1,12 @@
-import vertical_Marta from "../assets/Nos_Vert_M.jpg";
-import cuadrado_Marta from "../assets/Nos_Vert_M_1.jpg";
-import horizontal_Marta from "../assets/Nos_Hor_M.jpg";
+import vertical_Marta from "../assets/Nos_Vert_M.webp";
+import cuadrado_Marta from "../assets/Nos_Vert_M_1.webp";
+import horizontal_Marta from "../assets/Nos_Hor_M.webp";
 
-//import vertical_Ge from "../assets/Nos_Vert_G.jpg";
-//import cuadrado_Ge from "../assets/Nos_Vert_G_1.jpg";
-//import horizontal_Ge from "../assets/Nos_Hor_G.jpg";
+//import vertical_Ge from "../assets/Nos_Vert_G.webp";
+//import cuadrado_Ge from "../assets/Nos_Vert_G_1.webp";
+//import horizontal_Ge from "../assets/Nos_Hor_G.webp";
 
-import divider from "../assets/divider.png"
+import divider from "../assets/divider.webp"
 
 export default function Legado() {
     return (

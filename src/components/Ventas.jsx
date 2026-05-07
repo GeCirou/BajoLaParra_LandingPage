@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { PRODUCTOS } from "../data/productos_venta";
-import prevImg from "../assets/prev.png";
-import nextImg from "../assets/next.png";
+import prevImg from "../assets/prev.webp";
+import nextImg from "../assets/next.webp";
 
 export default function Ventas() {
     const [currentIndex, setCurrentIndex] = useState(0);

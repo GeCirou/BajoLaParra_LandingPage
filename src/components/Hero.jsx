@@ -1,5 +1,5 @@
-import fondo from '../assets/fondoHero2.jpg'
-import mate from '../assets/Mate.png'
+import fondo from '../assets/fondoHero2.webp'
+import mate from '../assets/Mate.webp'
 
 export default function Hero() {
     return (

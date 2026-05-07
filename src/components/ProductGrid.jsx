@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { PRODUCTOS } from "../data/productos_muestra"; 
-import prevImg from "../assets/prev.png";
-import nextImg from "../assets/next.png";
+import prevImg from "../assets/prev.webp";
+import nextImg from "../assets/next.webp";
 
 const categoriasInfo = [
     {

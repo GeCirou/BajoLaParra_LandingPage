@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import mail from "../assets/mail-logo.png";
-import fb from "../assets/facebook-logo.png";
-import ig from "../assets/instagram-logo.png";
-import wsp from "../assets/whatsapp-logo.png";
+import mail from "../assets/mail-logo.webp";
+import fb from "../assets/facebook-logo.webp";
+import ig from "../assets/instagram-logo.webp";
+import wsp from "../assets/whatsapp-logo.webp";
 
 export default function Contacto() {
     // 1. Estado para manejar el formulario
