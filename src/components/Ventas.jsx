@@ -1,16 +1,7 @@
-import { useState, useEffect } from "react"; // Reincorporamos useEffect
-import joya from "../assets/Joyas.png";
-import plateria from "../assets/Plateria.png";
-import ceramica from "../assets/Ceramica.png";
+import React, { useState, useEffect } from "react";
+import { PRODUCTOS } from "../data/productos_venta";
 import prevImg from "../assets/prev.png";
 import nextImg from "../assets/next.png";
-
-// Base de datos de las imagenes
-const galeria = [
-    { src: joya, alt: "Anillo", title: "Anillo de flor de lis", description: "Anillo de plata con diseño de flor de lis, inspirado en la elegancia." },
-    { src: plateria, alt: "Mate", title: "Mate con virolas", description: "Mate artesanal hecho con calabaza negra y virolas de alpaca." },
-    { src: ceramica, alt: "Plato", title: "Plato floral", description: "Plato de cerámica hecho a mano, decorado con motivos florales." }
-];
 
 export default function Ventas() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,8 +11,8 @@ export default function Ventas() {
     const [touchEnd, setTouchEnd] = useState(null);
     const minSwipeDistance = 50;
 
-    const handleNext = () => setCurrentIndex((prev) => (prev === galeria.length - 1 ? 0 : prev + 1));
-    const handlePrev = () => setCurrentIndex((prev) => (prev === 0 ? galeria.length - 1 : prev - 1));
+    const handleNext = () => setCurrentIndex((prev) => (prev === PRODUCTOS.length - 1 ? 0 : prev + 1));
+    const handlePrev = () => setCurrentIndex((prev) => (prev === 0 ? PRODUCTOS.length - 1 : prev - 1));
 
     // Control por teclado
     useEffect(() => {
@@ -29,13 +20,10 @@ export default function Ventas() {
             if (e.key === "ArrowRight") handleNext();
             if (e.key === "ArrowLeft") handlePrev();
         };
-
         window.addEventListener("keydown", handleKeyDown);
-        
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, []); 
 
-    // Desplazamiento del swipe
     const onTouchStart = (e) => {
         setTouchEnd(null);
         setTouchStart(e.targetTouches[0].clientX);
@@ -48,15 +36,23 @@ export default function Ventas() {
         if (distance < -minSwipeDistance) handlePrev();
     };
 
+    // Función para generar el link de WhatsApp dinámico
+    const getWspLink = () => {
+        const productoActual = PRODUCTOS[currentIndex];
+        const nroTelefono = "5491124921562";
+        const mensaje = `¡Hola! Vi en la sección de Tienda el *${productoActual.nombre}* y me gustaría consultar por su disponibilidad.`;
+        return `https://wa.me/${nroTelefono}?text=${encodeURIComponent(mensaje)}`;
+    };
+
     return (
-        <section id="tienda" className="bg-marfil scroll-mt-6 py-12 md:py-8 border-b border-deep-blue md:min-h-screen flex flex-col justify-center">
+        <section id="tienda" className="bg-marfil scroll-mt-8 py-12 md:py-8 border-b border-deep-blue md:min-h-screen flex flex-col justify-center relative">
             
             <div className="max-w-4xl mx-auto text-center mb-8 md:mb-8 px-4">
-                <h2 className="font-serif text-4xl md:text-5xl mb-4 text-deep-blue">Tienda</h2>
-                <p className="font-sans text-gris-profundo italic">Piezas únicas disponibles para entrega inmediata.</p>
+                <h2 className="font-serif text-4xl md:text-5xl mb-4 text-deep-blue uppercase tracking-widest">Tienda</h2>
+                <p className="font-sans text-grisProfundo italic">Piezas únicas disponibles para entrega inmediata.</p>
             </div>
 
-            <div className="flex items-center justify-center gap-4 max-w-6xl mx-auto w-full px-4">
+            <div className="flex items-center justify-center gap-4 max-w-7xl mx-auto w-full px-4">
                 
                 <button 
                     onClick={handlePrev} 
@@ -70,44 +66,52 @@ export default function Ventas() {
                     onTouchStart={onTouchStart}
                     onTouchMove={onTouchMove}
                     onTouchEnd={onTouchEnd}
-                    className="w-full lg:w-[950px] min-h-[500px] md:min-h-0 grid gap-6 bg-celeste p-8 md:p-12 
-                                rounded-tl-[3rem] rounded-br-[3rem] shadow-2xl items-center select-none
-                                grid-cols-1 md:grid-cols-2
-                                [grid-template-areas:'imagen'_'title'_'description'_'button'_'counter']
-                                md:[grid-template-areas:'imagen_title'_'imagen_description'_'imagen_button'_'counter_counter']"
+                    className="relative w-full lg:w-[1050px] md:h-auto lg:h-[380px] min-h-[380px] flex flex-col md:flex-row gap-0 bg-celeste 
+                                rounded-tl-[3rem] rounded-br-[3rem] shadow-2xl items-stretch select-none overflow-hidden"
                 >
-                    
-                    <div className="[grid-area:imagen] flex justify-center items-center min-h-0">
+                    <div className="flex-1 flex justify-center items-center h-auto md:h-full md:border-r md:border-deep-blue/20 p-8 md:p-12 min-h-0">
                         <img 
-                            src={galeria[currentIndex].src} 
-                            alt={galeria[currentIndex].alt} 
-                            className="max-h-[25vh] md:max-h-[40vh] w-auto object-contain drop-shadow-2xl pointer-events-none" 
+                            src={PRODUCTOS[currentIndex].imagen} 
+                            alt={PRODUCTOS[currentIndex].nombre} 
+                            className="max-h-[25vh] md:max-h-[300px] w-auto object-contain drop-shadow-2xl pointer-events-none rounded-2xl" 
                         />
                     </div>
 
-                    <h3 className="[grid-area:title] font-serif text-3xl md:text-5xl text-deep-blue md:text-left self-end">
-                        {galeria[currentIndex].title}
-                    </h3>
+                    <div className="flex-1 flex flex-col h-full justify-between text-left p-8 md:p-12 bg-white/10 md:bg-transparent">
+                        
+                        <div className="flex flex-col gap-4">
+                            <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-deep-blue md:text-left leading-tight">
+                                {PRODUCTOS[currentIndex].nombre}
+                            </h3>
 
-                    <p className="[grid-area:description] text-deep-blue/80 text-lg md:text-xl md:text-left self-start leading-relaxed">
-                        {galeria[currentIndex].description}
-                    </p>
+                            <p className="text-deep-blue/80 text-lg lg:text-xl md:text-left flex-grow leading-relaxed">
+                                {PRODUCTOS[currentIndex].descripcion}
+                            </p>
+                        </div>
 
-                    <div className="[grid-area:button] md:text-left">
-                        <a href="https://wa.me/5491124921562?text=Hola%20Bajo%20la%20Parra!%0AMe%20interesa%20consultar%20por%20una%20pieza%20personalizada." className="inline-block bg-zafiro px-10 py-4 text-marfil font-serif text-2xl border-2 border-deep-blue rounded-full hover:bg-transparent hover:text-deep-blue transition-all duration-300 shadow-lg transform hover:-translate-y-1">
-                            Consultanos
-                        </a>
-                    </div>
+                        <div className="flex flex-col gap-6 mt-8">
+                            <div className="md:text-left">
+                                <a 
+                                    href={getWspLink()} 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block bg-zafiro px-10 py-4 text-marfil font-serif text-2xl border-2 border-deep-blue rounded-full hover:bg-transparent hover:text-deep-blue transition-all duration-300 shadow-lg transform hover:-translate-y-1"
+                                >
+                                    Consultanos
+                                </a>
+                            </div>
 
-                    <div className="[grid-area:counter] flex justify-center md:justify-end gap-2 self-end mt-4">
-                        {galeria.map((_, idx) => (
-                            <div 
-                                key={idx} 
-                                className={`h-2 rounded-full transition-all duration-300 ${
-                                    currentIndex === idx ? 'w-8 bg-zafiro' : 'w-2 bg-zafiro/30'
-                                }`} 
-                            />
-                        ))}
+                            <div className="flex justify-end gap-2 mt-auto md:absolute md:bottom-8 md:right-8">
+                                {PRODUCTOS.map((_, idx) => (
+                                    <div 
+                                        key={idx} 
+                                        className={`h-2 rounded-full transition-all duration-300 ${
+                                            currentIndex === idx ? 'w-8 bg-zafiro' : 'w-2 bg-zafiro/30'
+                                        }`} 
+                                    />
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
 

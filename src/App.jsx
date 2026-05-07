@@ -5,6 +5,7 @@ import ProductGrid from './components/ProductGrid';
 import Ventas from './components/Ventas';
 import Footer from './components/Footer';
 import Contacto from './components/Contacto';
+import Servicios from './components/Servicios';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Nosotros /> 
                 <ProductGrid />
                 <Ventas />
+                <Servicios />
                 <Contacto /> 
             </main>
             <Footer />
