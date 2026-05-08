@@ -23,37 +23,37 @@ export const PRODUCTOS = [
     },
     {
     id: v3,
-    nombre: "",
+    nombre: "Colgantes de pájaros",
     categoria: "ceramica",
     imagen: v3,
-    descripcion: ""
+    descripcion: "Colgantes de cerámica con diseño de pájaros, ideales para decorar tu hogar con detalles simples."
     },
     {
     id: v4,
-    nombre: "",
+    nombre: "Cuencos esmaltados",
     categoria: "ceramica",
     imagen: v4,
-    descripcion: ""
+    descripcion: "Cuencos de cerámica esmaltada a mano, ideales para servir tus comidas favoritas con estilo."
     },
     {
     id: v5,
-    nombre: "",
+    nombre: "Plato de cerámica esmaltada",
     categoria: "ceramica",
     imagen: v5,
-    descripcion: ""
+    descripcion: "Plato de cerámica esmaltada a mano con motivo de flores, perfecto para disfrutar de tu comida o decorar tu mesa."
     },
     {
     id: v6,
-    nombre: "",
+    nombre: "Anillo cajón",
     categoria: "joyeria",
     imagen: v6,
-    descripcion: ""
+    descripcion: "Anillo cajón en plata, ideal para los amantes de la artesanía y el estilo único."
     },
     {
     id: v7,
-    nombre: "",
+    nombre: "Mate de calabaza",
     categoria: "plateria",
     imagen: v7,
-    descripcion: ""
+    descripcion: "Mate simple de calabaza con virola de alpaca batida, apoyado sobre una cinta de cuero decorada con motivos gauchescos, ideal para el mate de todos los días con un toque de estilo tradicional."
     }
 ];

@@ -66,270 +66,270 @@ export const PRODUCTOS = [
     },
     {
     id: j3,
-    nombre: "",
+    nombre: "Anillo de Orion",
     categoria: "joyeria",
     imagen: j3,
-    descripcion: ""
+    descripcion: "Anillo de plata inspirado en la constelación de Orión, perfecto para los amantes de la astronomía y el diseño único."
     },
     {
     id: j4,
-    nombre: "",
+    nombre: "Anillo de Orion",
     categoria: "joyeria",
     imagen: j4,
-    descripcion: ""
+    descripcion: "Anillo de plata inspirado en la constelación de Orión, perfecto para los amantes de la astronomía y el diseño único."
     },
     {
     id: j5,
-    nombre: "",
+    nombre: "Dije de avión",
     categoria: "joyeria",
     imagen: j5,
-    descripcion: ""
+    descripcion: "Dije de plata con forma de avión de papel, ideal para los amantes de la aviación y el diseño minimalista."
     },
     {
     id: j6,
-    nombre: "",
+    nombre: "Par de anillos de cinta",
     categoria: "joyeria",
     imagen: j6,
-    descripcion: ""
+    descripcion: "Par de anillos de plata con diseño simple de cinta, perfectos para un look elegante y versátil."
     },
     {
     id: j7,
-    nombre: "",
+    nombre: "Anillo cajón",
     categoria: "joyeria",
     imagen: j7,
-    descripcion: ""
+    descripcion: "Anillo doble de plata que forma un cajóncito, ideal para un look moderno y original."
     },
     {
     id: j8,
-    nombre: "",
+    nombre: "Anillo cajón",
     categoria: "joyeria",
     imagen: j8,
-    descripcion: ""
+    descripcion: "Anillo doble de plata que forma un cajóncito, ideal para un look moderno y original."
     },
     {
     id: j9,
-    nombre: "",
+    nombre: "Anillo cajón",
     categoria: "joyeria",
     imagen: j9,
-    descripcion: ""
+    descripcion: "Anillo doble de plata que forma un cajóncito, ideal para un look moderno y original."
     },
     {
     id: j10,
-    nombre: "",
+    nombre: "Patena de bronce",
     categoria: "joyeria",
     imagen: j10,
-    descripcion: ""
+    descripcion: "Patena de bronce simple y elegante, perfecta para dar un detalle de color a tus espacios."
     },
     {
     id: j11,
-    nombre: "",
+    nombre: "Anillo de flor de lis",
     categoria: "joyeria",
     imagen: j11,
-    descripcion: ""
+    descripcion: "Anillo de plata con diseño inspirado en la flor de lis, ideal para un look elegante y refinado."
     },
 
     {
     id: p0,
-    nombre: "",
+    nombre: "Cuchillo con hoja de 11 cm",
     categoria: "plateria",
     imagen: p0,
-    descripcion: ""
+    descripcion: "Hermoso cuchillo con hoja de 11 cm, mango hecho de cuerno y plata, vaina completa de plata, ideal para coleccionistas y amantes de la artesanía tradicional."
     },
     {
     id: p1,
-    nombre: "",
+    nombre: "Mate de calabaza y alpaca",
     categoria: "plateria",
     imagen: p1,
-    descripcion: ""
+    descripcion: "Elegante mate de calabaza negra con virolas en alpaca cincelada, perfecto para disfrutar de tu bebida tradicional con estilo y sofisticación."
     },
     {
     id: p2,
-    nombre: "",
+    nombre: "Cuchillo con vaina de cuero",
     categoria: "plateria",
     imagen: p2,
-    descripcion: ""
+    descripcion: "Cuchillo con mango hecho en soguería gauchezca con detalles en plata, acompañado con una vaina de cuero cosida a mano, ideal para los amantes de la artesanía tradicional y la cultura gaucha."
     },
     {
     id: p3,
-    nombre: "",
+    nombre: "Mate simple",
     categoria: "plateria",
     imagen: p3,
-    descripcion: ""
+    descripcion: "Mate simple de calabaza con virola de alpaca batida, apoyado sobre una cinta de cuero decorada con motivos gauchescos, ideal para el mate de todos los días con un toque de estilo tradicional."
     },
     {
     id: p4,
-    nombre: "",
+    nombre: "Botón de cuchillo con monograma",
     categoria: "plateria",
     imagen: p4,
-    descripcion: ""
+    descripcion: "Botón de cuchillo con monograma en plata, ideal para personalizar tu cuchillo artesanal."
     },
     {
     id: p5,
-    nombre: "",
+    nombre: "Cuchillo con vaina de cuero",
     categoria: "plateria",
     imagen: p5,
-    descripcion: ""
+    descripcion: "Cuchillo con mango hecho en soguería gauchezca con detalles en plata, acompañado con una vaina de cuero cosida a mano y decorada con tiento, ideal para los amantes de la artesanía tradicional y la cultura gaucha."
     },
     {
     id: p6,
-    nombre: "",
+    nombre: "Vaina de cuero con iniciales",
     categoria: "plateria",
     imagen: p6,
-    descripcion: ""
+    descripcion: "Vaina de cuero cosida a mano con tiento y decorada con iniciales en plata, ideal para personalizar tu cuchillo artesanal y darle un toque único."
     },
     {
     id: p7,
-    nombre: "",
+    nombre: "Vaina de cuero con iniciales",
     categoria: "plateria",
     imagen: p7,
-    descripcion: ""
+    descripcion: "Vaina de cuero cosida a mano con tiento y decorada con iniciales en plata, ideal para personalizar tu cuchillo artesanal y darle un toque único."
     },
     {
     id: p8,
-    nombre: "",
+    nombre: "Cuchillo con mango de soguería",
     categoria: "plateria",
     imagen: p8,
-    descripcion: ""
+    descripcion: "Cuchillo con mango hecho en soguería gauchezca con detalles en plata, ideal para los amantes de la artesanía tradicional y la cultura gaucha."
     },
     {
     id: p9,
-    nombre: "",
+    nombre: "Vaina de cuero con iniciales",
     categoria: "plateria",
     imagen: p9,
-    descripcion: ""
+    descripcion: "Vaina de cuero cosida a mano con tiento y decorada con iniciales en plata, ideal para personalizar tu cuchillo artesanal y darle un toque único."
     },
     {
     id: p10,
-    nombre: "",
+    nombre: "Cuchillo tradicional",
     categoria: "plateria",
     imagen: p10,
-    descripcion: ""
+    descripcion: "Cuchillo de acero carbono con mango de cuerno y detalles en plata, acompañado por una vaina de cuero con detalles en plata, incluyendo inicial y moneda argentina."
     },
     {
     id: p11,
-    nombre: "",
+    nombre: "Facón de alpaca",
     categoria: "plateria",
     imagen: p11,
-    descripcion: ""
+    descripcion: "Facón con mango y vaina de alpaca cincelada con motivos de flores. Perfecto para lucir en eventos especiales o como pieza de colección."
     },
     {
     id: p12,
-    nombre: "",
+    nombre: "Facón de alpaca",
     categoria: "plateria",
     imagen: p12,
-    descripcion: ""
+    descripcion: "Facón con mango y vaina de alpaca cincelada con motivos de flores. Perfecto para lucir en eventos especiales o como pieza de colección."
     },
     {
     id: p13,
-    nombre: "",
+    nombre: "Bombilla de alpaca",
     categoria: "plateria",
     imagen: p13,
-    descripcion: ""
+    descripcion: "Bombilla de alpaca labrada. Perfecta para disfrutar de tu bebida tradicional con estilo y sofisticación."
     },
     {
     id: p14,
-    nombre: "",
+    nombre: "Cuchillo con traba de flor de lis",
     categoria: "plateria",
     imagen: p14,
-    descripcion: ""
+    descripcion: "Cuchillo con traba de flor de lis en plata, ideal para los amantes de la artesanía tradicional y la cultura gaucha."
     },
     {
     id: p15,
-    nombre: "",
+    nombre: "Cuchillo con traba de toro",
     categoria: "plateria",
     imagen: p15,
-    descripcion: ""
+    descripcion: "Cuchillo con traba de toro en plata, mango de cuerno y vaina de cuero. ideal para los amantes de la artesanía tradicional y la cultura gaucha."
     },
     {
     id: p16,
-    nombre: "",
+    nombre: "Cuchillo con mango de cuerno blanco",
     categoria: "plateria",
     imagen: p16,
-    descripcion: ""
+    descripcion: "Cuchillo con mango de cuerno blanco y detalles en plata, ideal para los amantes de la artesanía tradicional y la cultura gaucha."
     },
     {
     id: p17,
-    nombre: "",
+    nombre: "Botón cincelado",
     categoria: "plateria",
     imagen: p17,
-    descripcion: ""
+    descripcion: "Botón cincelado en plata con motivo de mariposa, ideal para personalizar tu cuchillo artesanal."
     },
 
     {
     id: c0,
-    nombre: "",
+    nombre: "Juego de desayuno",
     categoria: "ceramica",
     imagen: c0,
-    descripcion: ""
+    descripcion: "Plato, taza y jarra de cerámica esmaltada a mano. Perfecto para disfrutar de un desayuno con estilo y originalidad."
     },
     {
     id: c1,
-    nombre: "",
+    nombre: "Bowl de ramen",
     categoria: "ceramica",
     imagen: c1,
-    descripcion: ""
+    descripcion: "Bowl de cerámica con decoración de un amado personaje popular, ideal para disfrutar de tu ramen con un toque de diversión y originalidad."
     },
     {
     id: c2,
-    nombre: "",
+    nombre: "Jarrita",
     categoria: "ceramica",
     imagen: c2,
-    descripcion: ""
+    descripcion: "Jarrita de cerámica esmaltada a mano. Perfecta para servir tu bebida favorita con estilo."
     },
     {
     id: c3,
-    nombre: "",
+    nombre: "Bowl de ramen",
     categoria: "ceramica",
     imagen: c3,
-    descripcion: ""
+    descripcion: "Bowl de cerámica con decoración de un bello personaje , ideal para disfrutar de tu ramen con un toque de diversión."
     },
     {
     id: c4,
-    nombre: "",
+    nombre: "Taza esmaltada",
     categoria: "ceramica",
     imagen: c4,
-    descripcion: ""
+    descripcion: "Taza de cerámica esmaltada a mano, perfecta para disfrutar de la bebida que prefieras."
     },
     {
     id: c5,
-    nombre: "",
+    nombre: "Juego de desayuno",
     categoria: "ceramica",
     imagen: c5,
-    descripcion: ""
+    descripcion: "Plato, taza y jarra de cerámica esmaltada a mano. Perfecto para disfrutar de un desayuno con estilo y originalidad."
     },
     {
     id: c6,
-    nombre: "",
+    nombre: "Plato de cerámica esmaltada",
     categoria: "ceramica",
     imagen: c6,
-    descripcion: ""
+    descripcion: "Plato de cerámica esmaltada a mano con motivo de hojas, perfecto para disfrutar de tu comida."
     },
     {
     id: c7,
-    nombre: "",
+    nombre: "Colgantes de pájaros",
     categoria: "ceramica",
     imagen: c7,
-    descripcion: ""
+    descripcion: "Colgantes de cerámica con diseño de pájaros, ideales para decorar tu hogar con detalles simples."
     },
     {
     id: c8,
-    nombre: "",
+    nombre: "Cuencos esmaltados",
     categoria: "ceramica",
     imagen: c8,
-    descripcion: ""
+    descripcion: "Cuencos de cerámica esmaltada a mano, ideales para servir tus comidas favoritas con estilo."
     },
     {
     id: c9,
-    nombre: "",
+    nombre: "Cuencos esmaltados",
     categoria: "ceramica",
     imagen: c9,
-    descripcion: ""
+    descripcion: "Cuencos de cerámica esmaltada a mano, ideales para servir tus comidas favoritas con estilo."
     },
     {
     id: c10,
-    nombre: "",
+    nombre: "Plato de cerámica esmaltada",
     categoria: "ceramica",
     imagen: c10,
-    descripcion: ""
+    descripcion: "Plato de cerámica esmaltada a mano con motivo de flores, perfecto para disfrutar de tu comida o decorar tu mesa."
     }
 ];
