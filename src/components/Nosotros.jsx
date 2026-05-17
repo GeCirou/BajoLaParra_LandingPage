@@ -2,9 +2,9 @@ import vertical_Marta from "../assets/Nos_Vert_M.webp";
 import cuadrado_Marta from "../assets/Nos_Vert_M_1.webp";
 import horizontal_Marta from "../assets/Nos_Hor_M.webp";
 
-//import vertical_Ge from "../assets/Nos_Vert_G.webp";
-//import cuadrado_Ge from "../assets/Nos_Vert_G_1.webp";
-//import horizontal_Ge from "../assets/Nos_Hor_G.webp";
+import vertical_Ge from "../assets/Nos_Vert_G.webp";
+import cuadrado_Ge from "../assets/Nos_Vert_G_1.webp";
+import horizontal_Ge from "../assets/Nos_Hor_G.webp";
 
 import divider from "../assets/divider.webp"
 
@@ -54,8 +54,8 @@ export default function Legado() {
                 
                 <div className="lg:w-1/2 shrink-0 hidden lg:block">
                     <img 
-                        src=""
-                        alt="" 
+                        src={horizontal_Ge} 
+                        alt="El aprendiz joyero trabajando en el taller." 
                     />
                 </div>
                 <div className="w-full md:w-1/2 px-4 md:mr-4">
@@ -64,8 +64,8 @@ export default function Legado() {
                             Mi oficio consiste en construir el puente para que el trabajo de nuestras manos trascienda el taller. Comprendo la nobleza de la materia porque también aprendí a moldearla.
                         </p>
                         <img 
-                            src=""
-                            alt="" 
+                            src={cuadrado_Ge}
+                            alt="El aprendiz joyero trabajando en el taller." 
                             className="md:hidden rounded-lg shadow-lg aspect-square object-cover w-full"
                         />
                     </div>
@@ -78,8 +78,8 @@ export default function Legado() {
                 </div>
                 <div className="md:w-1/2 shrink-0 hidden md:block lg:hidden">
                     <img 
-                        src=""
-                        alt="" 
+                        src={vertical_Ge}
+                        alt="El aprendiz joyero trabajando en el taller." 
                     />
                 </div>
             </div>
