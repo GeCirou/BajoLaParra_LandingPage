@@ -8,7 +8,7 @@ import horizontal_Ge from "../assets/Nos_Hor_G.webp";
 
 import divider from "../assets/divider.webp"
 
-export default function Legado() {
+export default function Nosotros() {
     return (
         <section id="nosotros" className="bg-marfil scroll-mt-10 py-8 border-b border-deep-blue text-center">
             <h2 className="font-serif text-4xl mb-6 text-deep-blue">Nosotros</h2>

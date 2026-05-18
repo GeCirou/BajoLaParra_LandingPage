@@ -37,7 +37,7 @@ export const PRODUCTOS = [
     },
     {
     id: v5,
-    nombre: "Plato de cerámica esmaltada",
+    nombre: "Plato esmaltado",
     categoria: "ceramica",
     imagen: v5,
     descripcion: "Plato de cerámica esmaltada a mano con motivo de flores, perfecto para disfrutar de tu comida o decorar tu mesa."
@@ -54,6 +54,6 @@ export const PRODUCTOS = [
     nombre: "Mate de calabaza",
     categoria: "plateria",
     imagen: v7,
-    descripcion: "Mate simple de calabaza con virola de alpaca batida, apoyado sobre una cinta de cuero decorada con motivos gauchescos, ideal para el mate de todos los días con un toque de estilo tradicional."
+    descripcion: "Mate simple de calabaza con virola de alpaca, apoyado sobre una cinta de cuero decorada con motivos gauchescos, ideal para el mate de todos los días con un toque de estilo tradicional."
     }
 ];

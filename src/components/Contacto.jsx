@@ -3,6 +3,7 @@ import mail from "../assets/mail-logo.webp";
 import fb from "../assets/facebook-logo.webp";
 import ig from "../assets/instagram-logo.webp";
 import wsp from "../assets/whatsapp-logo.webp";
+import {WSP_NUMBER} from "../data/config.js";
 
 export default function Contacto() {
     // 1. Estado para manejar el formulario
@@ -24,7 +25,7 @@ export default function Contacto() {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        const nroTelefono = "5491124921562"; // El número de tu link
+        const nroTelefono = WSP_NUMBER;
         
         // Formateo del mensaje con negritas para que te llegue prolijo
         const mensajeWsp = `¡Hola! Soy *${formData.nombre}*.
@@ -80,11 +81,11 @@ ${formData.mensaje}`;
                             className="border-b border-grisProfundo/30 py-2 focus:border-zafiro outline-none bg-transparent appearance-none cursor-pointer"
                         >
                             <option value="">¿Qué buscás?</option>
-                            <option>Joyas / Orfebrería</option>
-                            <option>Platería Criolla</option>
-                            <option>Cerámica</option>
-                            <option>Servicios / Reparaciones</option>
-                            <option>Otros / Consultas Generales</option>
+                            <option value="Línea Joyas / Orfebrería">Joyas / Orfebrería</option>
+                            <option value="Platería Criolla">Platería Criolla</option>
+                            <option value="Cerámica">Cerámica</option>
+                            <option value="Servicios / Reparaciones">Servicios / Reparaciones</option>
+                            <option value="Otros / Consultas Generales">Otros / Consultas Generales</option>
                         </select>
                     </div>
 
@@ -154,14 +155,14 @@ ${formData.mensaje}`;
                             @bajolaparrajoyas
                         </a>
                         <a
-                            href="https://wa.me/5491124921562?text=Hola%20Bajo%20la%20Parra!%0AMe%20interesa%20consultar%20por%20una%20pieza%20personalizada."
+                            href={`https://wa.me/${WSP_NUMBER}?text=Hola%20Bajo%20la%20Parra!%0AMe%20interesa%20consultar%20por%20una%20pieza%20personalizada.`}
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Enviar WhatsApp"
                             className="flex flex-row gap-x-3 items-center justify-center mt-4 text-xs min-[400px]:text-base md:text-xl text-deep-blue font-semibold hover:bg-celeste hover:text-black transition-colors border-2 border-zafiro rounded-xl py-2 px-2 md:px-4 w-full md:w-3/4 mx-auto"
                         >
                             <img src={wsp} alt="Logo WhatsApp" className="h-4 md:h-8 shrink-0" />
-                            +54 9 11 2492 1562
+                            {WSP_NUMBER}
                         </a>
                     </div>
                 </div>

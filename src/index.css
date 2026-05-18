@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:wght@300;400;700&display=swap');
 @import "tailwindcss";
 
@@ -12,7 +13,7 @@
   --color-marron-cuero: #7A4B3A;
 
   /* Fuentes */
-  --font-serif: "Garamond", serif;
+  --font-serif: "EB Garamond", serif;
   --font-sans: "Lato", sans-serif;
   --font-script: "Dancing Script", cursive;
 }

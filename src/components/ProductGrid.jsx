@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { PRODUCTOS } from "../data/productos_muestra"; 
 import prevImg from "../assets/prev.webp";
 import nextImg from "../assets/next.webp";
+import { useSwipe } from "../hooks/useSwipe";
 
 const categoriasInfo = [
     {
@@ -59,21 +60,7 @@ export default function ProductGrid() {
     }, [filteredCategoryItems.length]);
 
     // 5. Lógica de Swipe
-    const [touchStart, setTouchStart] = useState(null);
-    const [touchEnd, setTouchEnd] = useState(null);
-    const minSwipeDistance = 50;
-
-    const onTouchStart = (e) => {
-        setTouchEnd(null);
-        setTouchStart(e.targetTouches[0].clientX);
-    };
-    const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
-    const onTouchEnd = () => {
-        if (!touchStart || !touchEnd) return;
-        const distance = touchStart - touchEnd;
-        if (distance > minSwipeDistance) handleNext();
-        if (distance < -minSwipeDistance) handlePrev();
-    };
+    const { onTouchStart, onTouchMove, onTouchEnd } = useSwipe(handleNext, handlePrev);
 
     // 6. Acciones de apertura
     const abrirGrilla = (catId) => {
@@ -171,7 +158,7 @@ export default function ProductGrid() {
                                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-10">
                                     {activeCategoryItems.map((prod, idx) => (
                                         <div 
-                                            key={idx} 
+                                            key={idx + prod.nombre}
                                             onClick={() => abrirProducto(idx)}
                                             className="cursor-pointer group flex flex-col items-center bg-marfil p-5 rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-2 border-transparent hover:border-zafiro/30"
                                         >
@@ -251,9 +238,6 @@ export default function ProductGrid() {
                                 </div>
 
                                 <div className="mt-8 flex flex-col items-center gap-5">
-                                    <p className="text-marfil font-serif text-xl opacity-80 bg-zafiro/20 px-6 py-1 rounded-full">
-                                        {currentIndex + 1} / {filteredCategoryItems.length}
-                                    </p>
                                     <button
                                         className="px-10 py-2 border-2 border-marfil text-marfil rounded-full hover:bg-marfil hover:text-deep-blue transition-all cursor-pointer font-serif flex items-center gap-2 text-lg font-bold"
                                         onClick={() => setViewMode("grid")}

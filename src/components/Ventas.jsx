@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { PRODUCTOS } from "../data/productos_venta";
 import prevImg from "../assets/prev.webp";
 import nextImg from "../assets/next.webp";
+import {WSP_NUMBER} from "../data/config.js";
+import { useSwipe } from "../hooks/useSwipe.js";
 
 export default function Ventas() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Lógica de Swipe
-    const [touchStart, setTouchStart] = useState(null);
-    const [touchEnd, setTouchEnd] = useState(null);
-    const minSwipeDistance = 50;
+    const handleNext = useCallback(() => {
+        setCurrentIndex((prev) => (prev === PRODUCTOS.length - 1 ? 0 : prev + 1));
+    }, []);
 
-    const handleNext = () => setCurrentIndex((prev) => (prev === PRODUCTOS.length - 1 ? 0 : prev + 1));
-    const handlePrev = () => setCurrentIndex((prev) => (prev === 0 ? PRODUCTOS.length - 1 : prev - 1));
+    const handlePrev = useCallback(() => {
+        setCurrentIndex((prev) => (prev === 0 ? PRODUCTOS.length - 1 : prev - 1));
+    }, []);
 
     // Control por teclado
     useEffect(() => {
@@ -22,24 +24,15 @@ export default function Ventas() {
         };
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, []); 
+    }, [handleNext, handlePrev]); 
 
-    const onTouchStart = (e) => {
-        setTouchEnd(null);
-        setTouchStart(e.targetTouches[0].clientX);
-    };
-    const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
-    const onTouchEnd = () => {
-        if (!touchStart || !touchEnd) return;
-        const distance = touchStart - touchEnd;
-        if (distance > minSwipeDistance) handleNext();
-        if (distance < -minSwipeDistance) handlePrev();
-    };
+    // Lógica de Swipe
+    const { onTouchStart, onTouchMove, onTouchEnd } = useSwipe(handleNext, handlePrev);
 
     // Función para generar el link de WhatsApp dinámico
     const getWspLink = () => {
         const productoActual = PRODUCTOS[currentIndex];
-        const nroTelefono = "5491124921562";
+        const nroTelefono = WSP_NUMBER;
         const mensaje = `¡Hola! Vi en la sección de Tienda el *${productoActual.nombre}* y me gustaría consultar por su disponibilidad.`;
         return `https://wa.me/${nroTelefono}?text=${encodeURIComponent(mensaje)}`;
     };
