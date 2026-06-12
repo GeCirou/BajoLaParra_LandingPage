@@ -7,17 +7,17 @@ export default function Header() {
 
     return (
         <>
-            <header className="bg-zafiro text-marfil py-3 px-4 shadow-md border-b border-marfil sticky top-0 z-40">
-                <nav className="max-w-7xl mx-auto flex justify-between items-center">
-                    <div className="flex flex-row gap-3 items-center">
-                        <img src="/LogoAzulIco.ico" alt="Logo" className="h-9 w-10"/>
-                        <span className="font-serif text-xl tracking-widest uppercase">
+            <header className="bg-zafiro text-marfil py-3 px-4 3xl:py-5 3xl:px-8 shadow-md border-b border-marfil sticky top-0 z-40">
+                <nav className="max-w-7xl 3xl:max-w-[1800px] mx-auto flex justify-between items-center">
+                    <div className="flex flex-row gap-3 3xl:gap-4 items-center">
+                        <img src="/LogoAzulIco.ico" alt="Logo" className="h-9 w-10 3xl:h-12 3xl:w-14"/>
+                        <span className="font-logo text-xl 3xl:text-2xl tracking-widest uppercase">
                             Bajo la Parra
                         </span>
                     </div>
 
                     {/* Nav desktop */}
-                    <ul className="hidden md:flex gap-8 font-sans text-sm uppercase tracking-wider">
+                    <ul className="hidden md:flex gap-8 3xl:gap-12 font-sans text-md 3xl:text-xl uppercase tracking-wider">
                         {navItems.map((item) => (
                             <li key={item}>
                                 <a href={`#${item}`} className="hover:text-celeste transition-colors duration-300">

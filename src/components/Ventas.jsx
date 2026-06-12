@@ -38,68 +38,68 @@ export default function Ventas() {
     };
 
     return (
-        <section id="tienda" className="bg-marfil scroll-mt-8 py-12 md:py-8 border-b border-deep-blue md:min-h-screen flex flex-col justify-center relative">
+        <section id="tienda" className="bg-marfil scroll-mt-8 py-12 md:py-8 3xl:py-16 border-b border-deep-blue md:min-h-screen flex flex-col justify-center relative">
             
-            <div className="max-w-4xl mx-auto text-center mb-8 md:mb-8 px-4">
-                <h2 className="font-serif text-4xl md:text-5xl mb-4 text-deep-blue uppercase tracking-widest">Tienda</h2>
-                <p className="font-sans text-grisProfundo italic">Piezas únicas disponibles para entrega inmediata.</p>
+            <div className="max-w-4xl 3xl:max-w-6xl mx-auto text-center mb-8 md:mb-8 3xl:mb-12 px-4">
+                <h2 className="font-serif text-4xl md:text-5xl 3xl:text-6xl mb-4 3xl:mb-6 text-deep-blue uppercase tracking-widest">Tienda</h2>
+                <p className="font-sans text-grisProfundo italic 3xl:text-xl">Piezas únicas disponibles para entrega inmediata.</p>
             </div>
 
-            <div className="flex items-center justify-center gap-4 max-w-7xl mx-auto w-full px-4">
+            <div className="flex items-center justify-center gap-4 3xl:gap-8 max-w-7xl 3xl:max-w-[1800px] mx-auto w-full px-4 3xl:px-12">
                 
                 <button 
                     onClick={handlePrev} 
                     className="hidden md:block hover:scale-110 transition-transform cursor-pointer"
                     aria-label="Anterior"
                 >
-                    <img src={prevImg} alt="Anterior" className="h-14 w-auto opacity-70" />
+                    <img src={prevImg} alt="Anterior" className="h-14 3xl:h-20 w-auto opacity-70" />
                 </button>
 
                 <div 
                     onTouchStart={onTouchStart}
                     onTouchMove={onTouchMove}
                     onTouchEnd={onTouchEnd}
-                    className="relative w-full lg:w-[1050px] md:h-auto lg:h-[380px] min-h-[380px] flex flex-col md:flex-row gap-0 bg-celeste 
+                    className="relative w-full lg:w-[1050px] 3xl:w-[1500px] md:h-auto lg:h-[380px] 3xl:h-[520px] min-h-[380px] 3xl:min-h-[520px] flex flex-col md:flex-row gap-0 bg-celeste 
                                 rounded-tl-[3rem] rounded-br-[3rem] shadow-2xl items-stretch select-none overflow-hidden"
                 >
-                    <div className="flex-1 flex justify-center items-center h-auto md:h-full md:border-r md:border-deep-blue/20 p-8 md:p-12 min-h-0">
+                    <div className="flex-1 flex justify-center items-center h-auto md:h-full md:border-r md:border-deep-blue/20 p-8 md:p-12 3xl:p-16 min-h-0">
                         <img 
                             src={PRODUCTOS[currentIndex].imagen} 
                             alt={PRODUCTOS[currentIndex].nombre} 
-                            className="max-h-[25vh] md:max-h-[300px] w-auto object-contain drop-shadow-2xl pointer-events-none rounded-2xl" 
+                            className="max-h-[25vh] md:max-h-[300px] 3xl:max-h-[420px] w-auto object-contain drop-shadow-2xl pointer-events-none rounded-2xl" 
                         />
                     </div>
 
-                    <div className="flex-1 flex flex-col h-full justify-between text-left p-8 md:p-12 bg-white/10 md:bg-transparent">
+                    <div className="flex-1 flex flex-col h-full justify-between text-left p-8 md:p-12 3xl:p-16 bg-white/10 md:bg-transparent">
                         
-                        <div className="flex flex-col gap-4">
-                            <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-deep-blue md:text-left leading-tight">
+                        <div className="flex flex-col gap-4 3xl:gap-6">
+                            <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl 3xl:text-6xl text-deep-blue md:text-left leading-tight">
                                 {PRODUCTOS[currentIndex].nombre}
                             </h3>
 
-                            <p className="text-deep-blue/80 text-lg lg:text-xl md:text-left flex-grow leading-relaxed">
+                            <p className="text-deep-blue/80 text-lg lg:text-xl 3xl:text-2xl md:text-left flex-grow leading-relaxed">
                                 {PRODUCTOS[currentIndex].descripcion}
                             </p>
                         </div>
 
-                        <div className="flex flex-col gap-6 mt-8">
+                        <div className="flex flex-col gap-6 3xl:gap-8 mt-8 3xl:mt-12">
                             <div className="md:text-left">
                                 <a 
                                     href={getWspLink()} 
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-block bg-zafiro px-10 py-4 text-marfil font-serif text-2xl border-2 border-deep-blue rounded-full hover:bg-transparent hover:text-deep-blue transition-all duration-300 shadow-lg transform hover:-translate-y-1"
+                                    className="inline-block bg-zafiro px-10 3xl:px-14 py-4 3xl:py-6 text-marfil font-serif text-2xl 3xl:text-3xl border-2 border-deep-blue rounded-full hover:bg-transparent hover:text-deep-blue transition-all duration-300 shadow-lg transform hover:-translate-y-1"
                                 >
                                     Consultanos
                                 </a>
                             </div>
 
-                            <div className="flex justify-end gap-2 mt-auto md:absolute md:bottom-8 md:right-8">
+                            <div className="flex justify-end gap-2 3xl:gap-3 mt-auto md:absolute md:bottom-8 md:right-8 3xl:md:bottom-12 3xl:md:right-12">
                                 {PRODUCTOS.map((_, idx) => (
                                     <div 
                                         key={idx} 
-                                        className={`h-2 rounded-full transition-all duration-300 ${
-                                            currentIndex === idx ? 'w-8 bg-zafiro' : 'w-2 bg-zafiro/30'
+                                        className={`h-2 3xl:h-3 rounded-full transition-all duration-300 ${
+                                            currentIndex === idx ? 'w-8 3xl:w-12 bg-zafiro' : 'w-2 3xl:w-3 bg-zafiro/30'
                                         }`} 
                                     />
                                 ))}
@@ -113,7 +113,7 @@ export default function Ventas() {
                     className="hidden md:block hover:scale-110 transition-transform cursor-pointer"
                     aria-label="Siguiente"
                 >
-                    <img src={nextImg} alt="Siguiente" className="h-14 w-auto opacity-70" />
+                    <img src={nextImg} alt="Siguiente" className="h-14 3xl:h-20 w-auto opacity-70" />
                 </button>
             </div>
         </section>
